@@ -1,0 +1,22 @@
+server:
+  port: 8010
+
+## INFO
+info:
+  app:
+    name: @project.artifactId@
+    encoding: @project.build.sourceEncoding@
+    java:
+      source: @java.version@
+      target: @java.version@
+#默认访问路径http://localhost:8000/actuator/beans
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      enabled: true
+      show-details: always
+#management.security.enabled=false 2.x版本过时
